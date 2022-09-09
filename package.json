@@ -1,0 +1,38 @@
+{
+  "name": "UCF-Smart-Parking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index",
+    "server": "nodemon server/index -L",
+    "client": "cd client && yarn start",
+    "build": "cd client && yarn run build",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "production": "cross-env NODE_ENV=production node server/index",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
+  },
+
+  "author": "",
+  "license": "ISC",
+
+  "dependencies": {
+    "aws-sdk": "^2.1035.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.8",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.7.0",
+    "query-string": "^7.0.1",
+    "react-scripts": "^4.0.3",
+    "url-search-params": "^1.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.14"
+  }
+}
