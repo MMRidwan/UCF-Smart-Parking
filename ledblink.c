@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     for (;;)
     {
 //        PIOA_REGS->PIO_ODSR ^= PIN_PA3;
-        PIOA_REGS->PIO_ODSR ^= PIO_PA22;
+        PIOA_REGS->PIO_ODSR ^= PIO_PA22; // PIO_ODSR = Output Data Status Register
 
 
         for (volatile uint32_t i = 0; i < 200000; i++);
