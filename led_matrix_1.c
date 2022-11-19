@@ -321,7 +321,7 @@ void display(uint16_t num, uint16_t direction)
             
             enableLedControllers();           
 
-            for(volatile uint32_t j=0; j <400;j++);
+            for(volatile uint32_t j=0; j <200;j++);
             
 //            n++;
 //            if (n == 1000)
